@@ -1,0 +1,157 @@
+/* Общи стилове */
+body {
+    background: url('снимки/2.webp') center/cover no-repeat;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+/* Странично меню */
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 15%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.menu button {
+    font-size: 18px;
+    background: transparent;
+    border: none;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-decoration: underline;
+    font-family: "Montserrat", sans-serif;
+    padding: 10px 20px;
+    margin: 10px 0;
+}
+
+/* Основен контейнер (бял прозорец) */
+.main {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 37.5%;
+    background: white;
+    box-shadow: 0 2% 4% rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    overflow: hidden;
+    margin-left: 16%;
+    margin-top: 50px;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Контейнер с бутони (вътре в main) */
+.button-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* До 5 бутона на ред */
+    grid-gap: 10px;
+    padding: 20px;
+    width: 100%;
+    justify-items: center;
+    align-items: center;
+}
+
+/* Стилове за Dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: #600000;
+    color: white;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+    width: 150px;
+    border-radius: 5px;
+    text-align: center;
+    font-family: "Times New Roman", serif;
+    font-weight: bold;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.dropdown-content a, .dropdown-content button {
+    color: black;
+    padding: 12px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    background: white;
+    border: none;
+    width: 100%;
+}
+
+.dropdown:hover > .dropdown-content {
+    display: block;
+}
+
+.dropdown-content .dropdown {
+    position: relative;
+}
+
+.dropdown-content .dropdown-content {
+    top: 0;
+    left: 100%;
+    margin-left: 5px;
+}
+
+/* Респонсивен дизайн */
+@media screen and (max-width: 1024px) {
+    .main {
+        width: 85%;
+        height: auto;
+        margin-left: 10%;
+        margin-top: 30px;
+    }
+
+    .button-grid {
+        grid-template-columns: 1fr; /* 1 колонка на мобилни устройства */
+        grid-gap: 20px;
+    }
+
+    .menu {
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 10px 0;
+        position: relative;
+    }
+
+    .menu button {
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .dropdown .dropbtn {
+        width: 100%;
+        padding: 15px;
+    }
+}

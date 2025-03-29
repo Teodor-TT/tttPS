@@ -1,0 +1,138 @@
+/* Общи стилове */
+body {
+    background: url('снимки/2.webp') center/cover no-repeat;
+    margin: 0;
+    height: 95vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Arial", sans-serif;
+}
+
+/* Странично меню */
+.overlay-rectangle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay-rectangle button {
+    font-size: 18px;
+    background: none;
+    border: none;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-decoration: underline;
+    font-family: "Montserrat", sans-serif;
+    margin: 10px 0;
+    padding: 10px 20px;
+}
+
+/* Основен контейнер за съдържанието */
+.stuff-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    height: 100%;
+    background: white;
+    box-shadow: 0 2% 4% rgba(0, 0, 0, 0.2);
+    margin-left: 15%;
+    padding: 40px;
+}
+
+/* Заглавие на секция */
+.section-title {
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #666;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    font-family: Georgia, serif;
+    text-align: center;
+}
+
+/* Контейнер за всяка секция */
+.section {
+    padding: 15px 0;
+}
+
+/* Текст в параграф */
+p {
+    font-size: 18px;
+    color: #444;
+    margin: 8px 0;
+    font-family: "Calibri", sans-serif;
+    text-align: left;
+}
+
+/* Удебелен текст */
+b {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    text-transform: uppercase;
+    margin-right: 5px;
+}
+
+/* Респонсивен дизайн */
+@media screen and (max-width: 1024px) {
+    .stuff-wrapper {
+        width: 80%;
+        padding: 20px;
+        margin-left: 10%;
+    }
+
+    .section-title {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .overlay-rectangle {
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 10px 0;
+        position: relative;
+    }
+
+    .overlay-rectangle button {
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .stuff-wrapper {
+        width: 90%;
+        margin-left: 5%;
+        padding: 15px;
+    }
+
+    .section-title {
+        font-size: 16px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .overlay-rectangle button {
+        font-size: 12px;
+        padding: 4px 8px;
+    }
+}

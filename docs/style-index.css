@@ -1,0 +1,148 @@
+/* Основни стилове */
+body {
+    background: url('снимки/2.webp') center/cover no-repeat;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    flex-direction: column;
+}
+
+/* Меню вляво */
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 15%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.menu button {
+    font-size: 18px;
+    background: transparent;
+    border: none;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-decoration: underline;
+    font-family: "Montserrat", sans-serif;
+    padding: 10px 20px;
+    margin: 10px 0;
+}
+
+/* Основен контейнер */
+.main {
+    display: flex;
+    width: 65%;
+    height: 65%;
+    background: white;
+    box-shadow: 0 2% 4% rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    overflow: hidden;
+    margin-left: 15%;
+    margin-top: 50px;
+}
+
+/* Лява част с изображение */
+.image {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+}
+
+.image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Дясна част */
+.right {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Заглавие в дясно горе */
+.title {
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family: "Times New Roman", serif;
+    margin-right: 20%;
+}
+
+/* Информация в дясно долу */
+.information {
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 25px;
+    overflow-y: auto;
+}
+
+h2 {
+    font-size: 24px;
+    text-transform: uppercase;
+    text-decoration: underline;
+    font-family: Georgia, serif;
+}
+
+p {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.5;
+    font-family: "Times New Roman", serif;
+}
+
+strong {
+    font-weight: bold;
+}
+
+/* Респонсивен дизайн */
+@media screen and (max-width: 1024px) {
+    .main {
+        flex-direction: column;
+        width: 85%;
+        height: auto;
+        margin-left: 10%;
+        margin-top: 30px;
+    }
+
+    .image, .right {
+        width: 100%;
+    }
+
+    .title {
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .menu {
+        height: 50px;
+        width: 100%;
+        flex-direction: row;
+        padding: 0 10px;
+    }
+
+    .menu button {
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+}
